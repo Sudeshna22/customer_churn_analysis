@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<CustomerSupportCalls &le; -0.359<br/>gini = 0.243<br/>samples = 765<br/>value = [1030, 170]<br/>class = No Churn>, fillcolor="#e9965a"] ;
+1 [label=<gini = 0.0<br/>samples = 309<br/>value = [498, 0]<br/>class = No Churn>, fillcolor="#e58139"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<SatisfactionScore &le; -0.343<br/>gini = 0.367<br/>samples = 456<br/>value = [532, 170]<br/>class = No Churn>, fillcolor="#eda978"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label=<ComplaintFrequency &le; -0.351<br/>gini = 0.486<br/>samples = 183<br/>value = [122, 170]<br/>class = Churn>, fillcolor="#c7e3f8"] ;
+2 -> 3 ;
+4 [label=<gini = 0.0<br/>samples = 80<br/>value = [122, 0]<br/>class = No Churn>, fillcolor="#e58139"] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 103<br/>value = [0, 170]<br/>class = Churn>, fillcolor="#399de5"] ;
+3 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 273<br/>value = [410, 0]<br/>class = No Churn>, fillcolor="#e58139"] ;
+2 -> 6 ;
+}
